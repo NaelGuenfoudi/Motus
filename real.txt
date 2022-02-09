@@ -1,0 +1,3 @@
+genererMot: va permettre de choisir un mot au hasard en fonction de sa longueur dans un dico.
+Lettre: permet de gérer l'apparence d'une lettre en fonction qu'elle soit bien positionné, dans le mot mais mal positionné , ou pas dans le tableau
+comparaison: va permettre de comparer le mot donné et le mot généré , et de créer un tableau de la classe Lettre
