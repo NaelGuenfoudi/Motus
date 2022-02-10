@@ -15,13 +15,13 @@ public class GenererMot {
     /**
      * mot généré au hasard
      */
-    private String motG;
+    private String motGenere;
 
     public static void main(String[] args) {
         GenererMot gM = new GenererMot();
         String[] tab = gM.choisirMots(5);
         gM.choisirMot(tab);
-        System.out.println(gM.getMotG());
+        System.out.println(gM.getMotGenere());
     }
 
     /**
@@ -49,14 +49,14 @@ public class GenererMot {
     }
 
     /**
-     * definit motG par un mot au hasard d'un tableau de mots et enleve ce même mots de la liste des mots du dico
+     * definit motGenere par un mot au hasard d'un tableau de mots et enleve ce même mots de la liste des mots du dico
      *
      * @param tabMot
      */
     public void choisirMot(String[] tabMot) {
         Random r = new Random();
         int rand = r.nextInt(tabMot.length);
-        motG = tabMot[rand];
+        motGenere = tabMot[rand];
         enleverMot();
     }
 
@@ -67,7 +67,7 @@ public class GenererMot {
         String[] listeMot2 = new String[listeMots.length - 1];
         boolean trouve = false;
         for (int i = 0; i < listeMot2.length; i++) {
-            if (Objects.equals(listeMots[i], motG)) {
+            if (Objects.equals(listeMots[i], motGenere)) {
                 i++;
                 trouve = true;
             }
@@ -79,12 +79,12 @@ public class GenererMot {
         listeMots = listeMot2;
     }
 
-    public String getMotG() {
-        return motG;
+    public String getMotGenere() {
+        return motGenere;
     }
 
-    public void setMotG(String motG) {
-        this.motG = motG;
+    public void setMotGenere(String motGenere) {
+        this.motGenere = motGenere;
     }
 
 }
